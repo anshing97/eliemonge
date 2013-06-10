@@ -12,7 +12,7 @@ class SearchController < ApplicationController
 	  	album_name = google_album_art(params[:img_url]) 
 
 	  	if album_name.nil? 
-	  		flash.now[:error] = "Did you put in an url for an image?" 
+	  		flash.now[:error] = "Did you enter the url for an image?" 
 	  	elsif album_name.empty?  
 		  	flash.now[:error] = "Can't find album name for this"
 		  else 
