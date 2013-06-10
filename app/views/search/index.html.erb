@@ -11,7 +11,7 @@
  	</div>
 </div>
 <% unless @name.nil? %> 
-	<h3>Results for <u><%= @name %></u></h3>
+	<h3>Results for <%=link_to @name, 'http://www.google.com/search?q=' + @name, :target => '_blank' %></h3>
 	<ul>
 		<% @results.results.each do |el| %> 
 			<li>

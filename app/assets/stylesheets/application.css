@@ -43,8 +43,26 @@ ul {
 	list-style-type: none;
 }
 
+li:first-child {
+	margin-top: 30px;
+}
+
 li {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
+}
+
+li img {
+	margin-right: 10px;
+	width: 150px;
+
+	-webkit-transition: opacity .15s ease-in-out;
+    -moz-transition: opactiy .15s ease-in-out;
+    transition: opacity .15s ease-in-out;	
+}
+
+li img:hover {
+	opacity: 0.5;
+
 }
 
 li p {
