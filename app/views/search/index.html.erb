@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="span12">
+		<h1>Google + Discogs</h1>
+		<%= form_tag("/search", :method => "get") do %>
+		  <%= text_field_tag(:img_url, nil, { :placeholder => "enter image url", :class => "img-input" })%>
+		  <%= submit_tag("Search", :class => "hidden") %>
+		<% end %>
+		<% if flash.now[:error] %>
+			<div class="error"><%= flash.now[:error] %></div>
+		<% end %> 
+ 	</div>
+</div>
+<% unless @name.nil? %> 
+	<h3>Results for <u><%= @name %></u></h3>
+	<ul>
+		<% @results.results.each do |el| %> 
+			<li>
+			<%=link_to image_tag(el.thumb), el.uri, :target => "_blank" %> 
+			<p><%= el.title %></br> 	
+			<%= el.type.titleize %></p>
+			</li>
+		<% end %> 
+	<ul> 
+<% end %> 
