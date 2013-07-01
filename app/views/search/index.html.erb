@@ -13,11 +13,11 @@
 <% unless @name.nil? %> 
 	<h3>Results for <%=link_to @name, 'http://www.google.com/search?q=' + @name, :target => '_blank' %></h3>
 	<ul>
-		<% @results.results.each do |el| %> 
+		<% @response['results'].each do |el| %> 
 			<li>
-			<%=link_to image_tag(el.thumb), el.uri, :target => "_blank" %> 
-			<p><%= el.title %></br> 	
-			<%= el.type.titleize %></p>
+			<%=link_to image_tag(el['thumb']), 'http://www.discogs.com' + el['uri'], :target => "_blank" %> 
+			<p><%= el['title'] %></br> 	
+			<%= el['type'].titleize %></p>
 			</li>
 		<% end %> 
 	<ul> 

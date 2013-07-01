@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
 
-	include SearchHelper
+  include SearchHelper
 
   def index
 
@@ -16,7 +16,9 @@ class SearchController < ApplicationController
 	  	elsif album_name.empty?  
 		  	flash.now[:error] = "Can't find album name for this"
 		  else 
-				@results = search_discogs(album_name) 
+				r = search_discogs(album_name)
+				@response = JSON.parse(r.body)
+				
 				@name = album_name
 			end 
 

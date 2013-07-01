@@ -1,14 +1,27 @@
 module SearchHelper
 
-  require 'discogs'
+	require 'net/http'
+	require 'uri'
 
-  def discogs_api
-		@discogs_api ||= Discogs::Wrapper.new("My awesome web app")
-  end 
+	DISCOGS_API = "http://api.discogs.com/database/search"
 
-  def search_discogs (search_term)
-  	discogs_api.search (search_term)
-  end 
+	def search_discogs (term) 
+		uri = URI(DISCOGS_API)
+
+		request = Net::HTTP::Get.new(uri.to_s + "?" + query_string(term))
+		request.add_field("Accept", "application/json")
+		request.add_field("User-Agent", "Recccords")
+
+		Net::HTTP.new(uri.host).start do |http|
+			http.request(request)
+		end 
+	end 
+
+	def query_string ( term ) 
+		query = {:q => term, :format => 'vinyl'}
+		URI.escape query.map { |k,v| "#{k}=#{v}" }.join('&')
+	end 
+
 
   def mechanize_agent
   	@agent ||= Mechanize.new { |agent|
