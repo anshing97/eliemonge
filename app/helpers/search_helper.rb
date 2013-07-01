@@ -18,7 +18,7 @@ module SearchHelper
 	end 
 
 	def query_string ( term ) 
-		query = {:q => term, :format => 'vinyl'}
+		query = {:q => term, :format => 'vinyl', :type => 'release'}
 		URI.escape query.map { |k,v| "#{k}=#{v}" }.join('&')
 	end 
 
