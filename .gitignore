@@ -14,3 +14,15 @@
 /log/*.log
 /tmp
 /.rvmrc
+
+# Ignore other unneeded files.
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
+.ruby-gemset
+.ruby-version 
+.rspec
