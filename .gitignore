@@ -27,3 +27,4 @@ doc/
 .ruby-version 
 .rspec
 public/system/
+/config/local_env.yml
