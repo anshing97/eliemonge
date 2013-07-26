@@ -1,3 +1,3 @@
 <%= image_tag @image.image.url %>
 <div><%= @image.image.url %></div> 
-<div><%= "http://#{request.host}#{@image.image.url.split('?').first}" %></div> 
+<div><%= @image.image.url(:large).split('?').first %></div> 
