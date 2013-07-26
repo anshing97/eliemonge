@@ -14,6 +14,7 @@ gem 'nokogiri'
 gem 'mechanize'
 gem 'paperclip'
 gem 'aws-sdk'
+gem "rmagick", require: 'RMagick'
 
 # Gems used only for assets and not required
 # in production environments by default.
