@@ -6,6 +6,7 @@ class SearchController < ApplicationController
 
   	@results = nil
   	@name = nil
+    @image = Image.new
 
   	unless ( params[:img_url].nil? ) then 
 
