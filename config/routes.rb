@@ -1,5 +1,8 @@
 Elie::Application.routes.draw do
 
+  resources :images
+
+
   root :to => "search#index"
 
   match "search" => "search#index"
