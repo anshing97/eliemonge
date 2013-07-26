@@ -13,7 +13,7 @@ class ImagesController < ApplicationController
     @image = Image.new(params[:image])
 
     if @image.save
-      redirect_to controller: "search", img_url: "http://#{request.host}#{@image.image.url.split('?').first}"
+      redirect_to controller: "search", img_url: @image.image.url.split('?').first
     end 
   end
 end
