@@ -15,6 +15,8 @@ gem 'mechanize'
 gem 'paperclip'
 gem 'aws-sdk'
 gem "rmagick", require: 'RMagick'
+gem 'omniauth-oauth'
+gem 'omniauth-discogs'
 
 # Gems used only for assets and not required
 # in production environments by default.

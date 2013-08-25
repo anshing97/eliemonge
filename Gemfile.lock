@@ -54,6 +54,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.0)
+    hashie (2.0.5)
     hike (1.2.3)
     http-cookie (1.0.1)
       domain_name (~> 0.5)
@@ -84,6 +85,15 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     ntlm-http (0.1.1)
+    oauth (0.4.7)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    omniauth-discogs (0.0.2)
+      omniauth-oauth (~> 1.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
     paperclip (3.5.1)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -157,6 +167,8 @@ DEPENDENCIES
   jquery-rails
   mechanize
   nokogiri
+  omniauth-discogs
+  omniauth-oauth
   paperclip
   pg
   rails (= 3.2.11)
