@@ -11,4 +11,11 @@ class User < ActiveRecord::Base
       user.secret = auth["credentials"].secret
     end
   end
+
+  def update_credentials (auth)
+    self.token = auth["credentials"].token
+    self.secret = auth["credentials"].secret
+    self.save
+  end
+
 end

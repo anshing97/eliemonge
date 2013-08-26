@@ -39,19 +39,19 @@
 	display: inline-block;
 }
 
-ul {
+#results ul {
 	list-style-type: none;
 }
 
-li:first-child {
+#results li:first-child {
 	margin-top: 30px;
 }
 
-li {
+#results li {
 	margin-bottom: 30px;
 }
 
-li img {
+#results li img {
 	margin-right: 10px;
 	width: 90px;
 
@@ -60,12 +60,12 @@ li img {
     transition: opacity .15s ease-in-out;	
 }
 
-li img:hover {
+#results li img:hover {
 	opacity: 0.5;
 
 }
 
-li p {
+#results li p {
 	display: inline-block;
 	vertical-align: top;
 }
