@@ -14,11 +14,6 @@
 		<% end %>		
  	</div>
 </div>
-<div class="row">
-	<div class="span12">
-		<img src="http://api.discogs.com/image/R-150-5388086-1392132204-2492.jpeg">
-	</div> 
-</div>
 <% unless @name.nil? %> 
 	<h3>Results for <%=link_to @name, 'http://www.google.com/search?q=' + @name, :target => '_blank' %></h3>
 	<ul id="results">
