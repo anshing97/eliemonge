@@ -11,7 +11,7 @@ namespace :elie do
 
 			upload_form = upload_page.form('f')
 
-			upload_form.q = "http://clubs.calvin.edu/chimes/issue_images/106/10/Multi%20Full%20Coldplay%20Mylo%20Xyloto.jpg"
+			upload_form.q = "http://upload.wikimedia.org/wikipedia/en/a/a7/Random_Access_Memories.jpg"
 
 			result_page = agent.submit(upload_form)
 

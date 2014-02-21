@@ -36,33 +36,39 @@ module SearchHelper
 
   	name = nil
 
-  	begin 
-		mechanize_agent.get(GOOLGE_SEARCH_URL) do |upload_page|
+  	# begin 
+  		mechanize_agent.get(GOOLGE_SEARCH_URL) do |upload_page|
 
-			upload_form = upload_page.form('f')
+        # get the form then 
+        # get the q name element and fill with img url 
+  			upload_form = upload_page.form('f')
+  			upload_form.q = img_url
 
-			upload_form.q = img_url
+  			intermediate_page = mechanize_agent.submit (upload_form)
 
-			intermediate_page = mechanize_agent.submit (upload_form)
+        # click on this link 
+  			final_page = mechanize_agent.click(intermediate_page.link_with(:text => INTERMEDIATE_PAGE_BUTTON))
 
-			final_page = mechanize_agent.click(intermediate_page.link_with(:text => INTERMEDIATE_PAGE_BUTTON))
+        # final_page.save_as 'final.html'
+  			name = find_album_name (final_page.body)
 
-			name = find_album_name (final_page.body)
+  		end
+  	# rescue 
+  	# 	name = nil
+  	# end 
 
-		end
-	rescue 
-		name = nil
-	end 
-
-	name 
+  	name 
 
   end 
 
   def find_album_name (html) 
 		doc = Nokogiri::HTML(html)
-		names = doc.xpath('//div[@id="topstuff"]/div/a').map do | stuff | 
+
+    # find this under div#topstuff > div > div > a 
+		names = doc.xpath('//div[@id="topstuff"]/div/div/a').map do | stuff | 
 			stuff.content 
 		end
+    puts names
 		names.reject! { |e| e.empty? }
 		names.first		
 	end 
