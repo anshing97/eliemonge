@@ -1,0 +1,95 @@
+{
+  "pagination": {
+    "per_page": 50,
+    "pages": 1,
+    "page": 1,
+    "urls": {
+    },
+    "items": 3
+  },
+  "results": [
+    {
+      "style": [
+        "Leftfield",
+        "New Wave",
+        "Electro",
+        "Downtempo",
+        "Synth-pop"
+      ],
+      "thumb": "http://api.discogs.com/image/R-90-2278735-1274038822.jpeg",
+      "title": "Javelin - No Más",
+      "country": "US",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Album"
+      ],
+      "uri": "/Javelin-No-Más/release/2278735",
+      "label": [
+        "Luaka Bop"
+      ],
+      "catno": "6 808990074-1-2",
+      "year": "2010",
+      "genre": [
+        "Electronic",
+        "Rock"
+      ],
+      "resource_url": "http://api.discogs.com/releases/2278735",
+      "type": "release",
+      "id": 2278735
+    },
+    {
+      "style": [
+        "Alternative Rock"
+      ],
+      "thumb": "http://api.discogs.com/image/R-90-926726-1173646806.jpeg",
+      "title": "Diskothi-Q - Lane Discipline",
+      "country": "US",
+      "format": [
+        "Vinyl",
+        "7\""
+      ],
+      "uri": "/Diskothi-Q-Lane-Discipline/release/926726",
+      "label": [
+        "X-Mas Records"
+      ],
+      "catno": "X-MAS 009",
+      "year": "1995",
+      "genre": [
+        "Rock"
+      ],
+      "resource_url": "http://api.discogs.com/releases/926726",
+      "type": "release",
+      "id": 926726
+    },
+    {
+      "style": [
+        "MPB",
+        "Bossanova",
+        "Vocal"
+      ],
+      "thumb": "http://api.discogs.com/image/R-90-3562241-1345137744-2241.jpeg",
+      "title": "Various - Red Hot + Rio 2",
+      "country": "US",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Album"
+      ],
+      "uri": "/Various-Red-Hot-Rio-2/release/3562241",
+      "label": [
+        "eOne"
+      ],
+      "catno": "EOM-LP-2369",
+      "year": "2011",
+      "genre": [
+        "Latin",
+        "Funk / Soul",
+        "Pop"
+      ],
+      "resource_url": "http://api.discogs.com/releases/3562241",
+      "type": "release",
+      "id": 3562241
+    }
+  ]
+}
