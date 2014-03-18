@@ -35,7 +35,7 @@ class SearchController < ApplicationController
           @image = Image.new(:image => File.open(file_name))
 
           if @image.save
-            el['thumb'] = @image.image.url 
+            el['thumb'] = @image.image.url(:original).split('?').first
           end 
         end 
 
