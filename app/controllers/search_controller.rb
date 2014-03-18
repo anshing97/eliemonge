@@ -27,7 +27,7 @@ class SearchController < ApplicationController
           uri = URI.parse(el['thumb'])
           resp = user_access_token.get(el['thumb'])
 
-          file_name = File.basename(uri.path)
+          file_name = 'tmp/' + File.basename(uri.path)
           open( file_name,"wb") { |file|
             file.write(resp.body)
           }
