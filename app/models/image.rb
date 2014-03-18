@@ -11,6 +11,13 @@ class Image < ActiveRecord::Base
   },
   :convert_options => { :all => '-auto-orient' }
 
-  validates_attachment :image, :presence => true, :content_type => { :content_type => ["image/jpg", "image/gif", "image/png"] }
+  # Validate content type
+  validates_attachment_content_type :image, :content_type => /\Aimage/
+
+  # Validate filename
+  validates_attachment_file_name :image, :matches => [/png\Z/, /jpe?g\Z/]
+
+  # Explicitly do not validate
+  do_not_validate_attachment_file_type :image
 
 end

@@ -39,7 +39,7 @@ class SearchController < ApplicationController
           end 
         end 
 
-        puts JSON.pretty_generate(@response)
+        # puts JSON.pretty_generate(@response)
  
         @name = album_name
       end 
