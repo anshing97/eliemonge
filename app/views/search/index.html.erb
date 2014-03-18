@@ -5,7 +5,7 @@
 			<div class="error"><%= flash.now[:error] %></div>
 		<% end %> 		
 		<%= form_tag("/search", :method => "get") do %>
-		  <%= text_field_tag(:img_url, nil, { :placeholder => "enter image url", :class => "img-input" })%>
+		  <%= text_field_tag(:img_url, nil, { :placeholder => "enter image url and hit enter", :class => "img-input" })%>
 		  <%= submit_tag("Search", :class => "hidden") %>
 		<% end %>
 		<%= form_for @image, :url => images_path, :html => { :multipart => true } do |f| %>
